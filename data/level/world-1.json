@@ -1,0 +1,7 @@
+{
+    "name": "Forst world",
+    "music": "music_1.ogg",
+    "background_color": [130, 182, 255],
+    "background_img": "mountains.png",
+    "scenery_img": "forest.png"
+}

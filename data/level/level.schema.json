@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Level file schema",
+    "description": "Schema for a game level",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Level name"
+        },
+        "background_color": {
+            "type": "array",
+            "description": "Background color (behing background picture)",
+            "items": {
+                "type": "integer"
+            },
+            "minItems": 3,
+            "maxItems": 3
+        },
+        "background_img": {
+            "type": "string",
+            "description": "Background picture (behind scenery picture)",
+            "pattern": ".*[.](png|jpe?g)"
+        },
+        "scenery_img": {
+            "type": "string",
+            "description": "Scenery picture",
+            "pattern": ".*[.](png|jpe?g)"
+        },
+        "music": {
+            "type": "string",
+            "description": "Background music",
+            "pattern": ".*[.]ogg"
+        }
+    },
+    "required": [
+        "name", "background_img", "scenery_img", "background_color", "music"
+    ]
+}
